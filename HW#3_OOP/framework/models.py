@@ -77,12 +77,3 @@ class Model(ABC):
                 if id == int(el["object_id"]) and el["type_of_work"] == place_of_work:
                     employees_work.append(el)
         return employees_work
-
-    # @classmethod
-    # def get_employees_work(cls, id, place_of_work, data):
-    #     employees_work = []
-    #     if len(data) > 0:
-    #         for el in data:  # dictionary
-    #             if id == int(el["object_id"]) and el["type_of_work"] == place_of_work:
-    #                 employees_work.append(el)
-    #     return employees_work
