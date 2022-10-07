@@ -14,7 +14,6 @@ while action:
           "-----------------------\n"
           )
     flag = int(input("Choose an action from the list: "))
-
     if flag ==1:
         model = input("Model name: ").title()
         type_of_car = input("Type of car: ").title()

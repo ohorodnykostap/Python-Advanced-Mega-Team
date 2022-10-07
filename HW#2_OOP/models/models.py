@@ -1,9 +1,10 @@
 import json
 
+
 class Toyota:
     file = "cars.json"
 
-    def __init__(self, model,type_of_car, color, drive, shift_gear):
+    def __init__(self, model, type_of_car, color, drive, shift_gear):
         self.model = model
         self.type_of_car = type_of_car
         self.color = color
@@ -52,13 +53,13 @@ class Toyota:
     def save(self):
         data = self.get_data()
         new_car = {"model": self.model, "type of car": self.type_of_car, "car color": self.color,
-                   "drive": self.drive,"shift gear": self.shift_gear}
+                   "drive": self.drive, "shift gear": self.shift_gear}
         if len(data) > 0:
             new_car["id"] = data[-1]["id"] + 1
         else:
             new_car["id"] = 1
         data.append(new_car)
-        file = open("database/"+self.file, "w")
+        file = open("database/" + self.file, "w")
         data_in_json = json.dumps(data)
         file.write(data_in_json)
         return
